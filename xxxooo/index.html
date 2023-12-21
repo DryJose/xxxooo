@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Крестики-Нолики</title>
+</head>
+
+<body>
+    <header>
+        <h1>Крестики-Нолики</h1>
+    </header>
+    <main>
+        <div class="gameboard-wrapper">
+            <div class="players player1">
+                <label for="player1-name">Игрок 1</label>
+                <input type="text" id="player1-name" name="player1name" placeholder="Впишите имя">
+                <input type="button" class="add-name" id="p1-name-btn" value="Добавить имя">
+            </div>
+            <div class="players player2">
+                <label for="player2-name">Игрок 2</label>
+                <input type="text" id="player2-name" name="player2name" placeholder="Впишите имя">
+                <input type="button" class="add-name" id="p2-name-btn" value="Добавить имя">
+            </div>
+            <div class="players computer">
+                <span>Комплюктер</span>
+            </div>
+            <div class="game-status">
+                Введите имя
+            </div>
+            <div class="game-mode">
+                <button class="mode" onclick="game.modeSwitch(); gameUI.switchUImode()">Режим против ПК</button>
+            </div>
+            <div class="gameBoard">
+                <div class="box r b" id="0"></div>
+                <div class="box r b" id="1"></div>
+                <div class="box b" id="2"></div>
+                <div class="box r b" id="3"></div>
+                <div class="box r b" id="4"></div>
+                <div class="box b" id="5"></div>
+                <div class="box r" id="6"></div>
+                <div class="box r" id="7"></div>
+                <div class="box" id="8"></div>
+            </div>
+            <div class="game-controls">
+                <button class="new-game" onclick="game.newGame()">Новая игра</button>
+            </div>
+        </div>
+    </main>
+   
+    <script src="app.js"></script>
+</body>
+
+</html>
